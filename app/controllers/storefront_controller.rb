@@ -1,4 +1,4 @@
-class StorefrontController < ApplicationController
+class StorefrontController < ApplicationController #used as a backroom for admin users to create and update products and categories
   def all_items
   end
 

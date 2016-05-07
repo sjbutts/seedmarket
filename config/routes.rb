@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
   
-  get 'storefront/all_items'
-
-  get 'storefront/items_by_brand'
-
-  get 'storefront/items_by_category'
 
   devise_for :users
   resources :products
   resources :categories
   resources :line_items
+
+  get 'categorical' => 'storefront#items_by_category'  #routes to the category seed data that shows in the navbar
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
